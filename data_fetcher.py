@@ -3,9 +3,9 @@ import time
 import pandas as pd
 from nba_api.stats.endpoints import playergamelog, commonallplayers
 
-SEASON = '2020'
+SEASON = '2024'
 MERGED_FILE = f"data/cached_game_logs_{SEASON}.csv"
-SEASON = '2020'
+SEASON = '2024'
 
 os.makedirs('data', exist_ok=True)
 

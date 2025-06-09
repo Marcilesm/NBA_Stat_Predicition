@@ -126,8 +126,10 @@ def load_opponent_defense_data():
 
 if __name__ == "__main__":
     career_df = pd.read_csv("data/player_career_averages.csv")
+    career_df.columns = career_df.columns.str.strip()
     season_file, detected_year = find_latest_season_file()
     season_df = pd.read_csv(season_file)
+    season_df.columns = season_df.columns.str.strip()
     opponent_def_df = load_opponent_defense_data()
 
     career_df['PLAYER_NAME'] = career_df['PLAYER_NAME'].str.lower()
